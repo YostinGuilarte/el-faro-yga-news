@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, main, footer {
+  padding: 15px;
+}
+
+header {
+  background: #eee;
+}
+
+nav {
+  background: #ddd;
+  margin-bottom: 10px;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  margin-top: 15px;
+}
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-titulo img {
+  height: 70px;
+  width: auto;
+}
