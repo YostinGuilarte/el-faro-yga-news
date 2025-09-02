@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>El Faro - Inicio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
- <header>
-  <div class="logo-titulo">
-    <img src="logo_ElFaro/EL FARO.png" alt="Logo El Faro" width="120">
-    <h1>El Faro</h1>
-  </div>
-</header>
+  <header>
+    <div class="logo-titulo">
+      <img src="assets/img/elfaro.png" alt="Logo El Faro">
+      <h1>El Faro</h1>
+    </div>
+  </header>
 
-  <nav>
-    <a href="index.html">Inicio</a> |
-    <a href="deportes.html">Deportes</a> |
-    <a href="negocios.html">Negocios</a>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="deportes.html">Deportes</a></li>
+      <li><a href="negocios.html">Negocios</a></li>
+    </ul>
   </nav>
 
   <main>
     <h2>Noticias Principales Agosto 2025</h2>
-<table>
-  <tr>
-    <th>Título</th>
-    <th>Categoría</th>
-    <th>Contenido</th>
-  </tr>
-  <tr>
-    <td>Regulador eleva exigencias para reabrir El Teniente</td>
-    <td>Seguridad / Regulación</td>
-    <td>Sernageomin exige a Codelco un plan de monitoreo detallado para reanudar operaciones tras el colapso que dejó seis muertos.</td>
-  </tr>
-  <tr>
-    <td>Codelco ajusta baja expectativas de producción 2025</td>
-    <td>Producción</td>
-    <td>Tras el accidente en El Teniente, la estatal redujo su meta a 1,34-1,37 millones de toneladas y reportó caída del beneficio antes de impuestos.</td>
-  </tr>
-  <tr>
-    <td>Contrato de litio Salares Altoandinos listo para firma</td>
-    <td>Litio / Energías Limpias</td>
-    <td>El CEOL para el proyecto de Enami y Rio Tinto fue aprobado por Cochilco y Contraloría. Prevée producir hasta 75.000 t/año a partir de 2032.</td>
-  </tr>
-</table>
-  <br>
-  <br>
 
-    <h2>Premio AIEP</h2>
-    <video controls width="500">
-      <source src="videos_ElFaro/Video El Faro.mp4" type="video/mp4">
+    <!-- GRILLA de artículos (reemplaza la tabla) -->
+    <div class="articulos">
+      <article class="articulo">
+        <h3>Regulador eleva exigencias para reabrir El Teniente</h3>
+        <p><strong>Categoría:</strong> Seguridad / Regulación</p>
+        <p>Sernageomin exige a Codelco un plan de monitoreo detallado para reanudar operaciones tras el colapso que dejó seis muertos.</p>
+        <a class="leer-mas" href="#">Leer más</a>
+      </article>
+
+      <article class="articulo">
+        <h3>Codelco ajusta a la baja expectativas de producción 2025</h3>
+        <p><strong>Categoría:</strong> Producción</p>
+        <p>Tras el accidente en El Teniente, la estatal redujo su meta a 1,34–1,37 Mt y reportó caída del beneficio antes de impuestos.</p>
+        <a class="leer-mas" href="#">Leer más</a>
+      </article>
+
+      <article class="articulo">
+        <h3>Contrato de litio Salares Altoandinos listo para firma</h3>
+        <p><strong>Categoría:</strong> Litio / Energías Limpias</p>
+        <p>El CEOL de Enami y Rio Tinto fue aprobado por Cochilco y Contraloría. Prevén hasta 75.000 t/año desde 2032.</p>
+        <a class="leer-mas" href="#">Leer más</a>
+      </article>
+    </div>
+
+    <h2 style="margin-top:28px;">Premio AIEP</h2>
+    <video controls width="640">
+      <source src="assets/video/elfaro.mp4" type="video/mp4">
       Tu navegador no soporta video.
     </video>
-  <br>
-  <br>
 
-    <h2>Narrativa Semifinales Partido</h2>
+    <h2 style="margin-top:28px;">Narrativa Semifinales Partido</h2>
     <audio controls>
-      <source src="audios_ElFaro/Audio El Faro.mp3" type="audio/mp3">
+      <source src="assets/audio/elfaro.mp3" type="audio/mp3">
       Tu navegador no soporta audio.
     </audio>
   </main>
 
   <footer>
-    <p>&copy; 2025 YGA News</p>
+    <p>© 2025 YGA News · <a href="#">Política</a> · <a href="#">Contacto</a></p>
   </footer>
 </body>
 </html>
