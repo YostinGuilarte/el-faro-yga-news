@@ -1,4 +1,5 @@
 :root{
+  /* Variables globales para colores y fondos */
   --bg: #f5f5f5;      
   --card: #ffffff;    
   --azul-oscuro:#003366;  
@@ -8,6 +9,7 @@
 html, body{ margin:0; padding:0; }
 
 body{
+  /* Tipografía general y fondo de la página */
   font-family: "Inter", Arial, sans-serif;
   background: var(--bg);
   color:#222;
@@ -15,6 +17,7 @@ body{
 }
 
 header{
+  /* Encabezado con fondo azul oscuro y texto blanco */
   background: var(--azul-oscuro);
   color: #fff;
   padding: 12px 16px;
@@ -25,6 +28,7 @@ header{
 .logo-titulo img{ height:64px; width:auto; }
 
 nav{
+  /* Barra de navegación secundaria */
   background:#ddd;
   padding:10px 16px;
 }
@@ -42,6 +46,7 @@ nav a{
 nav a:hover{ text-decoration:underline; }
 
 main{
+  /* Contenedor principal del contenido */
   max-width:1100px;
   margin:20px auto;
   padding:0 16px;
@@ -49,12 +54,14 @@ main{
 h2{ margin:22px 0 10px; }
 
 .articulos{
+  /* Sección de artículos en formato grilla */
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap:18px;
 }
 
 .articulo{
+  /* Estilo individual de cada artículo */
   background:var(--card);
   border:1px solid #e7e7e7;
   border-radius:10px;
@@ -66,12 +73,14 @@ h2{ margin:22px 0 10px; }
 .articulo a.leer-mas{ text-decoration:underline; color:inherit; }
 
 .articulo:hover{
+  /* Efecto hover: fondo negro y texto blanco */
   background:#000;
   color:#fff;
   transform: translateY(-2px);
 }
 
 .thumb{
+  /* Imagen de portada dentro de cada artículo */
   width:100%;
   height:auto;
   border-radius:8px;
@@ -86,6 +95,7 @@ th{ background:#f2f2f2; }
 video, audio{ max-width:100%; }
 
 footer{
+  /* Pie de página con fondo azul y texto blanco */
   background: var(--azul-oscuro);
   color: #fff;
   text-align:center;
@@ -97,10 +107,12 @@ footer a{
   text-decoration: underline;
 }
 footer a:hover{
+  /* Enlaces del footer en negrita y sin subrayado al pasar el mouse */
   text-decoration: none;
   font-weight:700;
 }
 
 @media (max-width:600px){
+  /* Ajuste responsivo: artículos en una sola columna en móviles */
   .articulos{ grid-template-columns:1fr; }
 }
