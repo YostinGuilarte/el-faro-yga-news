@@ -8,13 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="page-deportes">
   <header>
     <div class="logo-titulo">
       <img src="assets/img/elfaro.png" alt="Logo El Faro">
       <h1>El Faro</h1>
     </div>
+    <div id="fecha-hora" aria-live="polite"></div>
   </header>
+
+  <!-- 🔹 Avisos con marquesina -->
+  <section class="avisos">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      ⚠️ Última Hora: Corte de agua programado en Santiago Centro · 
+      📰 Nueva edición de El Faro disponible · 
+      📢 Postulaciones abiertas al Premio Joven Emprendedor 2025
+    </marquee>
+  </section>
 
   <nav aria-label="Principal">
     <ul>
@@ -22,6 +32,11 @@
       <li><a href="deportes.html">Deportes</a></li>
       <li><a href="negocios.html">Negocios</a></li>
     </ul>
+            <div class="accesos-rapidos">
+          <li><a href="Cultura/cultura.html" aria-current="page">Cultura</a></li>
+          <li><a href="Nacional/nacional.html">Nacional</a></li>
+          <li><a href="Opinión/opinion.html">Opinión</a></li>
+        </div>
   </nav>
 
   <main>
@@ -52,7 +67,43 @@
   </main>
 
   <footer>
-    <p>© 2025 YGA News</p>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>El Faro</h4>
+        <p>Noticias de Chile y el mundo, con foco en negocios, deportes y sociedad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+          <li><a href="negocios.html">Negocios</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:yostinguilarte@elfaro.cl">yostinguilarte@elfaro.cl</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 YGA News · Todos los derechos reservados</p>
+    </div>
   </footer>
+
+  <script>
+    function actualizarFechaHora(){
+      const a = new Date();
+      let fecha = a.toLocaleDateString('es-CL',{day:'2-digit',month:'long',year:'numeric'});
+      fecha = fecha.replace(/ de (\p{L})/u,(m,l)=>' de '+l.toUpperCase());
+      const hora = a.toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+      document.getElementById('fecha-hora').textContent = `${fecha} | ${hora}`;
+    }
+    actualizarFechaHora(); setInterval(actualizarFechaHora,1000);
+  </script>
 </body>
 </html>
+
+

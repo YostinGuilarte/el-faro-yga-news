@@ -8,13 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="page-negocios">
   <header>
     <div class="logo-titulo">
       <img src="assets/img/elfaro.png" alt="Logo El Faro">
       <h1>El Faro</h1>
     </div>
+    <div id="fecha-hora" aria-live="polite"></div>
   </header>
+
+  <!-- 🔹 Avisos con marquesina -->
+  <section class="avisos">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      ⚠️ Última Hora: Corte de agua programado en Santiago Centro · 
+      📰 Nueva edición de El Faro disponible · 
+      📢 Postulaciones abiertas al Premio Joven Emprendedor 2025
+    </marquee>
+  </section>
 
   <nav aria-label="Principal">
     <ul>
@@ -22,35 +32,80 @@
       <li><a href="deportes.html">Deportes</a></li>
       <li><a href="negocios.html">Negocios</a></li>
     </ul>
+          <div class="accesos-rapidos">
+  <li><a href="Cultura/cultura.html" aria-current="page">Cultura</a></li>
+  <li><a href="Nacional/nacional.html">Nacional</a></li>
+  <li><a href="Opinión/opinion.html">Opinión</a></li>
   </nav>
 
   <main>
     <h2>Noticias de Negocios Chile</h2>
 
-    <div class="articulos">
-      <article class="articulo">
-        <h3>AgendaPro levanta US$35 millones para crecer en la región</h3>
-        <p><strong>Categoría:</strong> Startup / Software</p>
-        <p>La plataforma chilena para reservas y pagos cerró una ronda liderada por Riverwood Capital. Expandirán operaciones y sumarán funciones con IA.</p>
-      </article>
+<div class="articulos">
+  <article class="articulo">
+    <img class="thumb" src="assets/img/agenda-pro.jpg" alt="AgendaPro inversión">
+    <h3>AgendaPro levanta US$35 millones para crecer en la región</h3>
+    <p><strong>Categoría:</strong> Startup / Software</p>
+    <p>La plataforma chilena para reservas y pagos cerró una ronda liderada por Riverwood Capital...</p>
+  </article>
 
-      <article class="articulo">
-        <h3>Buk compra Bemmbo y lanza “Buk Finanzas”</h3>
-        <p><strong>Categoría:</strong> HRTech / Fintech</p>
-        <p>Integran soluciones de gastos y pagos dentro de su ecosistema para empresas.</p>
-      </article>
+  <article class="articulo">
+    <img class="thumb" src="assets/img/buk.jpg" alt="Buk Finanzas">
+    <h3>Buk compra Bemmbo y lanza “Buk Finanzas”</h3>
+    <p><strong>Categoría:</strong> HRTech / Fintech</p>
+    <p>Integran soluciones de gastos y pagos dentro de su ecosistema para empresas.</p>
+  </article>
 
-      <article class="articulo">
-        <h3>EtM Day 2025 confirma fecha en Santiago</h3>
-        <p><strong>Categoría:</strong> Ecosistema emprendedor</p>
-        <p>La próxima edición será en noviembre en el Parque Bicentenario, con foco en networking, inversión y vitrina para startups chilenas.</p>
-      </article>
-    </div>
+  <article class="articulo">
+    <img class="thumb" src="assets/img/etm-day.jpg" alt="EtM Day 2025">
+    <h3>EtM Day 2025 confirma fecha en Santiago</h3>
+    <p><strong>Categoría:</strong> Ecosistema emprendedor</p>
+    <p>La próxima edición será en noviembre en el Parque Bicentenario, con foco en networking...</p>
+  </article>
+</div>
+
   </main>
 
   <footer>
-    <p>© 2025 YGA News</p>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>El Faro</h4>
+        <p>Noticias de Chile y el mundo, con foco en negocios, deportes y sociedad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+          <li><a href="negocios.html">Negocios</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:yostinguilarte@elfaro.cl">yostinguilarte@elfaro.cl</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 YGA News · Todos los derechos reservados</p>
+    </div>
   </footer>
+
+  <script>
+    function actualizarFechaHora(){
+      const a = new Date();
+      let fecha = a.toLocaleDateString('es-CL',{day:'2-digit',month:'long',year:'numeric'});
+      fecha = fecha.replace(/ de (\p{L})/u,(m,l)=>' de '+l.toUpperCase());
+      const hora = a.toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+      document.getElementById('fecha-hora').textContent = `${fecha} | ${hora}`;
+    }
+    actualizarFechaHora(); setInterval(actualizarFechaHora,1000);
+  </script>
 </body>
 </html>
+
+
+
 
